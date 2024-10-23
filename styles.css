@@ -151,11 +151,23 @@ body {
 
 .social-links a {
     font-size: 2rem;
-    color: white;
-    text-decoration: none;
+    color: #f1f1f1;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
+.social-links a:hover {
+    color: #b74b4b;
+    transform: scale(1.2); /* Increases the size when hovered */
+}
+
+.social-links a:hover i {
+    color: #b74b4b;
+}
+
+
+
 .social-links a i {
+    transition: color 0.3s ease,background-color 0.3s ease, transform 0.3s ease;
     vertical-align: middle; /* Ensures icons align properly */
     line-height: 1; /* Removes additional spacing */
 }
