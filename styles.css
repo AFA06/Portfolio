@@ -111,10 +111,23 @@ body {
     font-size: 2rem;
 }
 
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Controls space between icons */
+    margin-bottom: 0; /* Remove any unwanted space below icons */
+    padding-bottom: 0; /* Ensure no padding below */
+}
+
 .social-links a {
-    margin: 0 15px;
-    color: white;
     font-size: 2rem;
+    color: white;
+    text-decoration: none;
+}
+
+.social-links a i {
+    vertical-align: middle; /* Ensures icons align properly */
+    line-height: 1; /* Removes additional spacing */
 }
 
 .button-container {
