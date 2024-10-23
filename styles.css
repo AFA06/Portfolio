@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+/* CUSTOM SCROLLBAR STYLING */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #b74b4b;
+    border-radius: 12px;
+}
+
+/* NAVBAR STYLING */
+.nav-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #b74b4b;
+    text-shadow: 0 0 10px #b74b4b;
+}
+
+.nav-container .links {
+    display: flex;
+}
+
+.nav-container .links a {
+    font-size: 1.2rem;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    position: relative;
+    transition: 0.3s linear;
+}
+
+.nav-container .links a::before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #b74b4b;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+.nav-container .links a:hover::before {
+    width: 100%;
+}
+
+.hamburg {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* HERO SECTION STYLING */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    text-align: center;
+}
+
+.main-container h1 {
+    font-size: 3rem;
+    color: white;
+}
+
+.main-container h1 span {
+    color: #b74b4b;
+}
+
+.typewriter {
+    color: white;
+    font-size: 2rem;
+}
+
+.social-links a {
+    margin: 0 15px;
+    color: white;
+    font-size: 2rem;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.hire-me-btn {
+    background-color: #b74b4b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.hire-me-btn:hover {
+    background-color: #a34040;
+}
+
+/* ABOUT SECTION STYLING */
+.about {
+    background: linear-gradient(to right, #b74b4b, #ff99cc);
+    color: white;
+    padding: 60px 0;
+}
+
+.about .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .left {
+    flex: 1;
+}
+
+.about .right {
+    flex: 2;
+}
+
+.about img {
+    width: 300px;
+    border-radius: 50%;
+}
+
+.about .topic {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.button {
+    margin-top: 20px;
+}
+
+.button button {
+    background-color: white;
+    color: #b74b4b;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* SKILLS SECTION STYLING */
+.skills {
+    padding: 60px 0;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.skills .content {
+    text-align: center;
+}
+
+.skills .boxes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.skills .box {
+    width: 25%;
+}
+
+.skills .topic {
+    font-weight: bold;
+}
+
+.skills .per {
+    color: #b74b4b;
+}
+
+/* CONTACT SECTION STYLING */
+.contact {
+    padding: 60px 0;
+    background-color: #282828;
+    color: white;
+}
+
+/* FOOTER STYLING */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}

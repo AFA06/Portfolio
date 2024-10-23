@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdurashid's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script defer src="script.js"></script>
+    <style>
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo"> 
+                <span>AF06</span>
+            </div>
+            <div class="links">
+                <div class="link"><a href="#">Home</a></div>
+                <div class="link"><a href="#about">About</a></div>
+                <div class="link"><a href="#skills">Skills</a></div>
+                <div class="link"><a href="#contact">Contact</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="toggleDropdown()"></i>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="main-container">
+            <div class="content">
+                <h1>Hey, I am <span>Abdurashid Fattokhov</span></h1>
+                <div class="typewriter"> 
+                    <span id="changing-text">I am </span>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/abdurashid-fattokhov-4587ba308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/abdurashid_fattokho1/" target="blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://t.me/fattokhov_zafx" target="blank">
+                        <i class="fa-brands fa-telegram"> </i>
+                    </a>
+                    <a href="https://wa.me/447778821396" target="blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>                    
+                    <a href="https://github.com/53R3N17" target="blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>                                     
+                </div>
+                <div class="button-container">
+                    <a href="path-to-your-cv.pdf" download class="hire-me-btn">Hire Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="content">
+            <div class="title"><span>About Me</span></div>
+            <div class="about-details">
+                <div class="left">
+                    <img src="images/AF.png" alt="Portrait of Abdurashid Fattokhov">
+                </div>
+                <div class="right">
+                    <div class="topic">Software Developer & AI Enthusiast</div>
+                    <p>
+                        I'm Abdurashid Fattokhov, a Computer Science student at Brunel University, focusing on AI. I’m passionate about building user-friendly web applications and have hands-on experience in both front-end and back-end development with tools like HTML, CSS, JavaScript, and more.
+                    </p>
+                    <p>
+                        I've worked on projects like the Brunel Hospital Management System and Evolute School Management System, contributing to their design and functionality. Additionally, I have provided IT support and troubleshooting in educational environments.
+                    </p>
+                    <p>
+                        I'm also active in event organizing, having founded the Uzbek Society at Brunel University. My goal is to keep growing in AI and entrepreneurship while contributing to tech innovations.
+                    </p>
+                    <div class="button">
+                        <button>Download CV</button>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="content">
+            <div class="title"><span>My Skills</span></div>
+            <div class="skills-details">
+                <div class="text">
+                    <div class="topic">Skills Reflect our knowledge</div>
+                    <p data-aos="fade-right">Lorem</p>
+                    <div class="experience">
+                        <div class="num">10</div>
+                        <div class="exp">Years Of Experience</div>
+                    </div>
+                </div>
+                <div class="boxes">
+                    <div class="box">
+                        <div class="topic">HTML</div>
+                        <div class="per">60%</div>
+                    </div>
+                    <div class="box">
+                        <div class="topic">CSS</div>
+                        <div class="per">60%</div>
+                    </div>
+                    <div class="box">
+                        <div class="topic">JavaScript</div>
+                        <div class="per">40%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="content">
+            <div class="title"><span>Contact Me</span></div>
+            <div class="text">
+                <div class="topic">Have any projects?</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut maxime quasi doloribus, ullam omnis quia iste, maiores perspiciatis corporis praesentium dicta ducimus itaque illo facilis, beatae vitae incidunt necessitatibus adipisci?</p>
+                <div class="button">
+                    <button>Let's Chat</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="text">
+            <span>Created By <a href="#">AF06</a> | &#169; 2024 All Rights Reserved</span>
+        </div>
+    </footer>
+</body>
+</html>
