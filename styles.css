@@ -253,10 +253,31 @@ body {
 }
 
 /* CONTACT SECTION STYLING */
+/* CONTACT SECTION STYLING */
 .contact {
-    padding: 60px 0;
-    background-color: #282828;
-    color: white;
+    padding: 100px 30px;
+    color: #f1f1f1;
+}
+
+.form-group {
+    margin: 15px 0;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+    border: 2px solid #b74b4b;
+    outline: none;
+}
+
+.button {
+    margin-top: 20px;
 }
 
 /* FOOTER STYLING */

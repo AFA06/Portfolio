@@ -118,20 +118,41 @@
         </div>
     </section>
 
+
     <section class="contact" id="contact">
         <div class="content">
             <div class="title"><span>Contact Me</span></div>
             <div class="text">
                 <div class="topic">Have any projects?</div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut maxime quasi doloribus, ullam omnis quia iste, maiores perspiciatis corporis praesentium dicta ducimus itaque illo facilis, beatae vitae incidunt necessitatibus adipisci?</p>
-                <div class="button">
-                    <button>Let's Chat</button>
-                </div>
+                <p>If you have a project or an idea in mind, let's connect and make it happen!</p>
             </div>
+            <form id="contact-form" action="your-email-endpoint" method="POST">
+                <div class="form-group">
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname" required>
+                </div>
+                <div class="form-group">
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div class="button">
+                    <button type="submit" class="hire-me-btn">Send Message</button>
+                </div>
+            </form>
         </div>
     </section>
-
-    <footer>
         <div class="text">
             <span>Created By <a href="#">AF06</a> | &#169; 2024 All Rights Reserved</span>
         </div>
