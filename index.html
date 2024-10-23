@@ -35,23 +35,23 @@
             <div class="content">
                 <h1>Hey, I am <span>Abdurashid Fattokhov</span></h1>
                 <div class="typewriter"> 
-                    <span id="changing-text">I am </span>
+                    <span id="changing-text">I am  </span> <!-- Typewriter text -->
                 </div>
                 
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/abdurashid-fattokhov-4587ba308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
-                    <a href="https://www.instagram.com/abdurashid_fattokho1/" target="blank">
+                    <a href="https://www.instagram.com/abdurashid_fattokho1/" target="_blank">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
-                    <a href="https://t.me/fattokhov_zafx" target="blank">
+                    <a href="https://t.me/fattokhov_zafx" target="_blank">
                         <i class="fa-brands fa-telegram"> </i>
                     </a>
-                    <a href="https://wa.me/447778821396" target="blank">
+                    <a href="https://wa.me/447778821396" target="_blank">
                         <i class="fa-brands fa-whatsapp"></i>
                     </a>                    
-                    <a href="https://github.com/53R3N17" target="blank">
+                    <a href="https://github.com/53R3N17" target="_blank">
                         <i class="fa-brands fa-github"></i>
                     </a>                                     
                 </div>
@@ -64,27 +64,29 @@
 
     <section class="about" id="about">
         <div class="content">
-            <div class="title"><span>About Me</span></div>
-            <div class="about-details">
-                <div class="left">
-                    <img src="images/AF.png" alt="Portrait of Abdurashid Fattokhov">
+            <div class="left">
+                <img src="images/AF1.png" alt="Profile Image">
+            </div>
+            <div class="right">
+                <h2 class="topic">Software Developer & AI Enthusiast</h2>
+                <p>
+                    I'm Abdurashid Fattokhov, a Computer Science student at Brunel University, focusing on AI. 
+                    I'm passionate about building user-friendly web applications and have hands-on experience in 
+                    both front-end and back-end development with tools like HTML, CSS, JavaScript, and more.
+                </p>
+                <p>
+                    I’ve worked on projects like the Brunel Hospital Management System and Evolute School Management 
+                    System, contributing to their design and functionality. Additionally, I have provided IT support 
+                    and troubleshooting in educational environments.
+                </p>
+                <p>
+                    I’m also active in event organizing, having founded the Uzbek Society at Brunel University. My goal 
+                    is to keep growing in AI and entrepreneurship while contributing to tech innovations.
+                </p>
+                <div class="button">
+                    <a href="path-to-your-cv.pdf" class="hire-me-btn">Download CV</a>
                 </div>
-                <div class="right">
-                    <div class="topic">Software Developer & AI Enthusiast</div>
-                    <p>
-                        I'm Abdurashid Fattokhov, a Computer Science student at Brunel University, focusing on AI. I’m passionate about building user-friendly web applications and have hands-on experience in both front-end and back-end development with tools like HTML, CSS, JavaScript, and more.
-                    </p>
-                    <p>
-                        I've worked on projects like the Brunel Hospital Management System and Evolute School Management System, contributing to their design and functionality. Additionally, I have provided IT support and troubleshooting in educational environments.
-                    </p>
-                    <p>
-                        I'm also active in event organizing, having founded the Uzbek Society at Brunel University. My goal is to keep growing in AI and entrepreneurship while contributing to tech innovations.
-                    </p>
-                    <div class="button">
-                        <a href="Abdurashid_Fattokhov_cv.docx" download class="hire-me-btn">Download CV</a>
-                    </div>
-                    
-            </div> 
+            </div>
         </div>
     </section>
 
@@ -117,7 +119,6 @@
             </div>
         </div>
     </section>
-
 
     <section class="contact" id="contact">
         <div class="content">
@@ -153,9 +154,32 @@
             </form>
         </div>
     </section>
+
+    <footer>
         <div class="text">
             <span>Created By <a href="#">AF06</a> | &#169; 2024 All Rights Reserved</span>
         </div>
     </footer>
+
+    <script>
+        // Scroll detection to hide/show navbar
+        let lastScrollTop = 0; // Variable to store last scroll position
+        const navbar = document.querySelector('.nav-container'); // Select the navbar
+        
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop; // Current scroll position
+
+            // Check if the user is scrolling down
+            if (currentScroll > lastScrollTop) {
+                // Scrolling down
+                navbar.style.top = '-80px'; // Adjust to the height of your navbar to hide it
+            } else {
+                // Scrolling up
+                navbar.style.top = '0'; // Show the navbar
+            }
+            
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+        });
+    </script>
 </body>
 </html>

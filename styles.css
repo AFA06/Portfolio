@@ -26,31 +26,28 @@ body {
 
 /* NAVBAR STYLING */
 .nav-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
     position: fixed;
     top: 0;
-    z-index: 1000;
+    left: 0;
+    width: 100%;
+    z-index: 1200;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    justify-content: space-between; /* Ensure space between logo and links */
+    padding: 10px 20px; /* Added padding for better spacing */
+    transition: top 0.3s;
 }
 
-.logo {
+.nav-container .logo {
     color: white;
     font-size: 2rem;
     font-weight: bold;
 }
 
-.logo span {
-    color: #b74b4b;
-    text-shadow: 0 0 10px #b74b4b;
-}
-
 .nav-container .links {
     display: flex;
+    align-items: center; /* Center items vertically in the links */
 }
 
 .nav-container .links a {
@@ -59,7 +56,7 @@ body {
     margin: 0 20px;
     text-decoration: none;
     font-weight: 550;
-    position: relative;
+    position: relative; /* Change to relative for proper positioning of the pseudo-element */
     transition: 0.3s linear;
 }
 
@@ -79,11 +76,38 @@ body {
 }
 
 .hamburg {
-    display: none;
+    display: none; /* Hidden by default, shown on mobile */
     font-size: 2rem;
     color: white;
     cursor: pointer;
 }
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .nav-container .links {
+        display: none; /* Hide links by default in mobile view */
+        position: absolute;
+        top: 60px; /* Adjust depending on your navbar height */
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        transition: all 0.3s ease;
+    }
+
+    .nav-container .links.active {
+        display: flex; /* Show links when active */
+    }
+
+    .hamburg {
+        display: block; /* Show hamburger icon on mobile */
+    }
+}
+
 
 @media (max-width: 768px) {
     .nav-container .links {
@@ -107,7 +131,7 @@ body {
 
     .nav-container .links a {
         font-size: 2rem;
-        margin: 20px 0;
+        margin: 0px 0;
     }
 
     .hamburg {
@@ -121,19 +145,27 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.main-container {
     text-align: center;
 }
 
-.main-container h1 {
+.hero h1 {
     font-size: 3rem;
     color: white;
 }
 
-.main-container h1 span {
+.hero h1 span {
     color: #b74b4b;
+}
+
+#changing-title {
+    color: #b74b4b;
+    font-size: 1.8rem;
+    margin-top: 10px;
+    transition: opacity 0.5s ease;
+}
+
+#changing-text {
+    font-size: 1.5rem;
 }
 
 .typewriter {
@@ -144,9 +176,9 @@ body {
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Controls space between icons */
-    margin-bottom: 0; /* Remove any unwanted space below icons */
-    padding-bottom: 0; /* Ensure no padding below */
+    gap: 20px;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .social-links a {
@@ -157,21 +189,15 @@ body {
 
 .social-links a:hover {
     color: #b74b4b;
-    transform: scale(1.2); /* Increases the size when hovered */
+    transform: scale(1.2);
 }
-
-.social-links a:hover i {
-    color: #b74b4b;
-}
-
-
 
 .social-links a i {
-    transition: color 0.3s ease,background-color 0.3s ease, transform 0.3s ease;
-    vertical-align: middle; /* Ensures icons align properly */
-    line-height: 1; /* Removes additional spacing */
+    transition: color 0.3s ease, transform 0.3s ease;
+    vertical-align: middle;
 }
 
+/* BUTTON STYLING */
 .button-container {
     margin-top: 20px;
 }
@@ -193,46 +219,44 @@ body {
 
 /* ABOUT SECTION STYLING */
 .about {
-    background: linear-gradient(to right, #b74b4b, #ff99cc);
+    background: linear-gradient(to right, #1a1a1a);
     color: white;
     padding: 60px 0;
-}
-
-.about .content {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.about .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 30px;
+}
+
 .about .left {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about .right {
     flex: 2;
+    padding-left: 40px;
 }
 
 .about img {
     width: 300px;
-    border-radius: 50%;
+    border-radius: 20px;
 }
 
 .about .topic {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
-}
-
-.button {
-    margin-top: 20px;
-}
-
-.button button {
-    background-color: white;
-    color: #b74b4b;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    margin-bottom: 10px;
 }
 
 /* SKILLS SECTION STYLING */
@@ -265,7 +289,6 @@ body {
 }
 
 /* CONTACT SECTION STYLING */
-/* CONTACT SECTION STYLING */
 .contact {
     padding: 100px 30px;
     color: #f1f1f1;
@@ -288,8 +311,18 @@ input:focus, textarea:focus {
     outline: none;
 }
 
+/* BUTTON STYLING FOR CONTACT */
 .button {
     margin-top: 20px;
+}
+
+.button button {
+    background-color: white;
+    color: #b74b4b;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* FOOTER STYLING */

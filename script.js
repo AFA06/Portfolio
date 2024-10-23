@@ -1,11 +1,14 @@
+
+
+// Typing effect settings
 const typewriterText = ["a Software Developer", "an AI Enthusiast", "a Problem Solver"];
-const colors = ["#ffcc00", "#00ccff", "#ff0066"];
+const colors = ["#b74b4b", "#b74b4b", "#b74b4b", "#b74b4b"];
 let typewriterIndex = 0;
 let charIndex = 0;
 
 function type() {
     const changingText = document.getElementById("changing-text");
-    
+
     // If the current text isn't fully typed out
     if (charIndex < typewriterText[typewriterIndex].length) {
         const span = `<span style="color:${colors[typewriterIndex]}">${typewriterText[typewriterIndex].charAt(charIndex)}</span>`;
@@ -17,10 +20,11 @@ function type() {
         setTimeout(erase, 2000);
     }
 }
+    
 
 function erase() {
     const changingText = document.getElementById("changing-text");
-    
+
     // If the current text isn't fully erased
     if (charIndex > 0) {
         const textContent = changingText.innerHTML;
@@ -38,19 +42,29 @@ function erase() {
             // Clear the previous text
             changingText.innerHTML = "I am ";
             type(); // Start typing the next text
-        }, 500); 
+        }, 500);
     }
 }
 
-// Start typing animation on window load
-window.onload = function() {
-    const changingText = document.getElementById("changing-text");
-    changingText.innerHTML = "I am "; // Initial text before typing
-    type();
+// Rotate titles in the background
+const changeText = () => {
+    const textElement = document.getElementById('changing-title');
+
+    // Fade out effect before changing the text
+    textElement.style.opacity = 0;
+
+    setTimeout(() => {
+        // Replace the text content
+        textElement.textContent = titles[index];
+        textElement.style.opacity = 1;
+
+        // Update index for the next text
+        index = (index + 1) % titles.length; // Loop back to the first title
+    }, 500); // Wait for fade-out effect before changing text
 };
 
-// Responsive navbar function
-function toggleDropdown() {
-    const links = document.querySelector('.links');
-    links.classList.toggle('active');
-}
+// Start typing animation and title rotation on window load
+window.onload = function () {
+    type();
+    setInterval(changeText, 3000); // Change the title every 3 seconds
+};
