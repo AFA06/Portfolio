@@ -62,56 +62,105 @@
         </div>
     </section>
 
-    <section class="about" id="about">
-        <div class="content">
-            <div class="left">
-                <img src="images/AF1.png" alt="Profile Image">
+    <div class="about-container">
+        <h2 class="about-title">About Me</h2>
+        <div class="about-content">
+          <div class="profile-section">
+            <img src="/api/placeholder/400/500" alt="Profile Photo" class="profile-image">
+            <div class="profile-text">
+              <p class="bio">
+                I'm Abdurashid Fattokhov, a Computer Science student at Brunel University, focusing on AI. 
+                I'm passionate about building user-friendly web applications and have hands-on experience in 
+                both front-end and back-end development.
+              </p>
+              <p class="bio">
+                My journey into tech has been driven by a desire to create innovative solutions 
+                and contribute to cutting-edge developments in software engineering and artificial intelligence.
+              </p>
             </div>
-            <div class="right">
-                <h2 class="topic">Software Developer & AI Enthusiast</h2>
-                <p>
-                    I'm Abdurashid Fattokhov, a Computer Science student at Brunel University, focusing on AI. 
-                    I'm passionate about building user-friendly web applications and have hands-on experience in 
-                    both front-end and back-end development with tools like HTML, CSS, JavaScript, and more.
-                </p>
-                <p>
-                    I’ve worked on projects like the Brunel Hospital Management System and Evolute School Management 
-                    System, contributing to their design and functionality. Additionally, I have provided IT support 
-                    and troubleshooting in educational environments.
-                </p>
-                <p>
-                    I’m also active in event organizing, having founded the Uzbek Society at Brunel University. My goal 
-                    is to keep growing in AI and entrepreneurship while contributing to tech innovations.
-                </p>
-                <div class="button">
-                    <a href="path-to-your-cv.pdf" class="hire-me-btn">Download CV</a>
-                </div>
+          </div>
+          
+          <div class="tabs-container">
+            <div class="tabs">
+                <button class="tab-btn" data-tab="skills">Skills</button>
+                <button class="tab-btn" data-tab="experience">Experience</button>
+                <button class="tab-btn" data-tab="education">Education</button>
+                <button class="tab-btn" data-tab="certificates">Certificates</button>
             </div>
-        </div>
-    </section>
 
+            <div class="tab-content" id="experience">
+                <div class="exp-item">
+                  <div class="exp-date">2023 - Present</div>
+                  <div class="exp-role">Brunel Hospital Management System</div>
+                  <div class="exp-desc">Contributed to system design and functionality</div>
+                </div>
+                <div class="exp-item">
+                  <div class="exp-date">2022 - 2023</div>
+                  <div class="exp-role">Evolute School Management System</div>
+                  <div class="exp-desc">Frontend development and IT support</div>
+                </div>
+              </div>
+              
+              <div class="tab-content" id="education">
+                <div class="edu-item">
+                  <div class="edu-date">2021 - Present</div>
+                  <div class="edu-degree">Computer Science</div>
+                  <div class="edu-school">Brunel University London</div>
+                </div>
+              </div>
+              
+              <div class="tab-content" id="certificates">
+                <div class="cert-item">
+                  <div class="cert-icon">🏆</div>
+                  <div class="cert-title">Founder</div>
+                  <div class="cert-desc">Uzbek Society at Brunel University</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+            
+            <div class="tab-content active" id="skills">
+              <div class="skill-item">
+                <div class="skill-icon">💻</div>
+                <div class="skill-title">Web Development</div>
+                <div class="skill-desc">HTML, CSS, JavaScript, Node.js</div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">🤖</div>
+                <div class="skill-title">AI & ML</div>
+                <div class="skill-desc">Python, TensorFlow, Machine Learning</div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">🗄️</div>
+                <div class="skill-title">Databases</div>
+                <div class="skill-desc">MySQL, PostgreSQL</div>
+              </div>
+            </div>
+            
+        
     <section class="skills" id="skills">
         <div class="content">
             <div class="title"><span>My Skills</span></div>
             <div class="skills-details">
-                <div class="text">
+                <div class="text hover-effect">
                     <div class="topic">Skills Reflect our knowledge</div>
-                    <p data-aos="fade-right">Lorem</p>
+                    <p>Lorem</p>
                     <div class="experience">
                         <div class="num">10</div>
                         <div class="exp">Years Of Experience</div>
                     </div>
                 </div>
                 <div class="boxes">
-                    <div class="box">
+                    <div class="box hover-effect">
                         <div class="topic">HTML</div>
                         <div class="per">60%</div>
                     </div>
-                    <div class="box">
+                    <div class="box hover-effect">
                         <div class="topic">CSS</div>
                         <div class="per">60%</div>
                     </div>
-                    <div class="box">
+                    <div class="box hover-effect">
                         <div class="topic">JavaScript</div>
                         <div class="per">40%</div>
                     </div>
@@ -119,6 +168,7 @@
             </div>
         </div>
     </section>
+    
 
     <section class="contact" id="contact">
         <div class="content">

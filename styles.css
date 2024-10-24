@@ -218,46 +218,127 @@ body {
 }
 
 /* ABOUT SECTION STYLING */
-.about {
-    background: linear-gradient(to right, #1a1a1a);
-    color: white;
-    padding: 60px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.about .content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.about-container {
     max-width: 1200px;
-    width: 100%;
-    padding: 0 30px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #111;
+    color: #fff;
 }
 
-.about .left {
-    flex: 1;
+.about-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.profile-section {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
-.about .right {
-    flex: 2;
-    padding-left: 40px;
-}
-
-.about img {
+.profile-image {
     width: 300px;
-    border-radius: 20px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-.about .topic {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+.profile-text {
+    flex: 1;
 }
+
+.bio {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tab-btn {
+    padding: 0.75rem 1.5rem;
+    background: #333;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s;
+    font-size: 1rem;
+    position: relative;
+}
+
+.tab-btn:hover {
+    background: #444;
+}
+
+.tab-btn.active {
+    background: #4169e1;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #4169e1;
+}
+
+.tab-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tab-content.active {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    opacity: 1;
+}
+
+
+.skill-item, .exp-item, .edu-item, .cert-item {
+    background: #222;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+
+.skill-item:hover, .exp-item:hover, .edu-item:hover, .cert-item:hover {
+  transform: translateY(-5px);
+}
+
+.skill-icon, .cert-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.skill-title, .exp-role, .edu-degree, .cert-title {
+  font-size: 1.2rem;
+  color: #4169e1;
+  margin-bottom: 0.5rem;
+}
+
+.skill-desc, .exp-desc, .edu-school, .cert-desc {
+  color: #ccc;
+}
+
+.exp-date, .edu-date {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
 
 /* SKILLS SECTION STYLING */
 .skills {
