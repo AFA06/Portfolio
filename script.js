@@ -1,15 +1,14 @@
 // Array of texts to display
-const typewriterText = ["a Software Developer", "an AI Enthusiast", "a Problem Solver"];
-const colors = ["#b74b4b", "#b74b4b", "#b74b4b", "#b74b4b"];
+const typewriterText = ["a Software Developer", "an AI Enthusiast", "a Problem Solver" ];
 let typewriterIndex = 0;
 let charIndex = 0;
 
 function type() {
     const changingText = document.getElementById("changing-text");
-    
     if (charIndex < typewriterText[typewriterIndex].length) {
         const span = typewriterText[typewriterIndex].charAt(charIndex);
-        changingText.innerHTML += span;
+        // Add the typewriter text in the specified color
+        changingText.innerHTML = "I am " + "<span style='color: #e91e63'>" + typewriterText[typewriterIndex].slice(0, charIndex + 1) + "</span>";
         charIndex++;
         setTimeout(type, 100);
     } else {
@@ -19,10 +18,9 @@ function type() {
 
 function erase() {
     const changingText = document.getElementById("changing-text");
-    
     if (charIndex > 0) {
-        const textContent = changingText.innerHTML;
-        changingText.innerHTML = textContent.slice(0, -1);
+        // Keep the color while erasing
+        changingText.innerHTML = "I am " + "<span style='color: #e91e63'>" + typewriterText[typewriterIndex].slice(0, charIndex - 1) + "</span>";
         charIndex--;
         setTimeout(erase, 50);
     } else {
@@ -37,6 +35,7 @@ function erase() {
         }, 500);
     }
 }
+
 
 // Initialize the typewriter effect when the page loads
 window.onload = function() {
@@ -80,4 +79,29 @@ document.addEventListener('DOMContentLoaded', function() {
         const firstTabId = tabButtons[0].getAttribute('data-tab');
         switchTab(firstTabId);
     }
+
+
+    function toggleDropdown() {
+        const links = document.querySelector('.links');
+        links.classList.toggle('show');
+    }
+    
+    // Close menu when clicking a link
+    document.querySelectorAll('.links a').forEach(link => {
+        link.addEventListener('click', () => {
+            const links = document.querySelector('.links');
+            if (links.classList.contains('show')) {
+                links.classList.remove('show');
+            }
+        });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        const links = document.querySelector('.links');
+        const hamburg = document.querySelector('.hamburg');
+        if (!links.contains(e.target) && !hamburg.contains(e.target) && links.classList.contains('show')) {
+            links.classList.remove('show');
+        }
+    });
 });
